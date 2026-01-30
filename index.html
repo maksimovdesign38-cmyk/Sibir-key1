@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sibir Key - Ремонт квартир под ключ в Иркутске</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">
+                    <svg class="logo__icon" viewBox="0 0 40 40">
+                        <path d="M20 5 L5 15 L20 25 L35 15 Z M20 15 L22 20 L20 25 L18 20 Z" fill="#D97706"/>
+                        <path d="M15 30 L25 30 L20 35 Z" fill="#065F46"/>
+                    </svg>
+                    <span class="logo__text">Sibir Key</span>
+                </div>
+                <nav class="nav">
+                    <a href="#services" class="nav__link">Услуги</a>
+                    <a href="#portfolio" class="nav__link">Портфолио</a>
+                    <a href="#faq" class="calc-link">Вопросы</a>
+                    <a href="#contacts" class="nav__link">Контакты</a>
+                </nav>
+                <!-- 🔥 КРЕСТИК ЗАКРЫТИЯ -->
+<div class="mobile-menu-close" id="mobileMenuClose">
+    <span></span>
+    <span></span>
+</div>
+                <!-- 🔥 ГАМБУРГЕР КНОПКА -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</header>
+                <button onclick="document.getElementById('calcModal').style.display='flex'; document.body.style.overflow='hidden'" 
+        class="btn btn--primary" type="button">
+    Рассчитать стоимость
+</button>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section с слайдером -->
+    <!-- Hero Section - простой CSS слайдер -->
+<section class="hero">
+    <div class="hero-slider">
+        <div class="hero-slide active" style="background-image: url('img/bg/1.png')">
+            <div class="hero-slide__overlay"></div>
+        </div>
+        <div class="hero-slide" style="background-image: url('img/bg/2.png')">
+            <div class="hero-slide__overlay"></div>
+        </div>
+        <div class="hero-slide" style="background-image: url('img/bg/3.png')">
+            <div class="hero-slide__overlay"></div>
+        </div>
+    </div>
+    
+    <div class="hero-slider__dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+    </div>
+    
+    <div class="hero__content">
+        <h1 class="hero__title">Ремонт квартир под ключ от 5000 ₽/м² за 30 дней</h1>
+        <p class="hero__subtitle">Полный цикл: от замера до мебели. Гарантия 3 года. Скидка 10% на первый заказ</p>
+        <div class="hero__features">
+            <div class="feature">
+                <div class="feature__icon">📏</div>
+                <span>Бесплатный замер</span>
+            </div>
+            <div class="feature">
+                <div class="feature__icon">💰</div>
+                <span>Фиксированная цена</span>
+            </div>
+            <div class="feature">
+                <div class="feature__icon">🏠</div>
+                <span>100+ объектов</span>
+            </div>
+        </div>
+        <button onclick="document.getElementById('calcModal').style.display='flex'; document.body.style.overflow='hidden'" 
+        class="btn btn--primary" type="button">
+    Рассчитать стоимость
+</button>
+
+    </div>
+</section>
+
+
+    <!-- Services -->
+    <section id="services" class="services section">
+        <div class="container">
+            <h2 class="section__title">Наши услуги</h2>
+            <div class="services__grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="50">
+                    <div class="service-card__img" style="background-image: url('img/sw/1.png')"></div>
+                    <div class="service-card__content">
+                        <h3>Косметический ремонт</h3>
+                        <div class="price">от 5000 ₽/м²</div>
+                        <p>Покраска, обои, полы, потолки</p>
+                        <button class="btn btn--secondary js-details-toggle">Подробнее</button>
+                        <div class="service-card__details">
+                            <ul>
+                                <li>Покраска стен и потолков</li>
+                                <li>Новые обои или жидкие</li>
+                                <li>Ламинат/линолеум</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card__img" style="background-image: url('img/sw/2.png')"></div>
+                    <div class="service-card__content">
+                        <h3>Капитальный ремонт</h3>
+                        <div class="price">от 8000 ₽/м²</div>
+                        <p>Замена труб, проводки, стяжка</p>
+                        <button class="btn btn--secondary js-details-toggle">Подробнее</button>
+                        <div class="service-card__details">
+                            <ul>
+                                <li>Полная замена коммуникаций</li>
+                                <li>Стяжка пола, выравнивание</li>
+                                <li>Новые розетки, выключатели</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="service-card__img" style="background-image: url('img/sw/3.png')"></div>
+                    <div class="service-card__content">
+                        <h3>Дизайнерский ремонт</h3>
+                        <div class="price">от 12000 ₽/м²</div>
+                        <p>Индивидуальный проект + 3D</p>
+                        <button class="btn btn--secondary js-details-toggle">Подробнее</button>
+                        <div class="service-card__details">
+                            <ul>
+                                <li>3D-визуализация проекта</li>
+                                <li>Авторский дизайн-проект</li>
+                                <li>Уникальная отделка</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                   <div class="service-card__img" style="background-image: url('img/sw/4.png')"></div>
+                    <div class="service-card__content">
+                        <h3>Под ключ с мебелью</h3>
+                        <div class="price">от 15000 ₽/м²</div>
+                        <p>Полный комплект + техника</p>
+                        <button class="btn btn--secondary js-details-toggle">Подробнее</button>
+                        <div class="service-card__details">
+                            <ul>
+                                <li>Мебель на заказ</li>
+                                <li>Вся бытовая техника</li>
+                                <li>Декор и текстиль</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio section">
+        <div class="container">
+            <h2 class="section__title">Портфолио</h2>
+            <div class="portfolio__filters">
+                <button class="filter active" data-filter="all">Все</button>
+                <button class="filter" data-filter="kitchen">Кухня</button>
+                <button class="filter" data-filter="living">Гостиная</button>
+                <button class="filter" data-filter="bathroom">Ванная</button>
+                <button class="filter" data-filter="studio">Однокомнатная</button>
+            </div>
+            <!-- Дополнение для секции PORTFOLIO - 8 полных карточек -->
+<div class="portfolio__grid">
+   <!-- 🔥 КЕЙС 1: 3 PNG фото -->
+<div class="portfolio-item kitchen studio" data-gallery="1">
+    <div class="portfolio-item__before" style="background-image: url('img/pf/1/1.png')"></div>
+    <div class="portfolio-item__after" style="background-image: url('img/pf/1/3.png')"></div>
+    <div class="portfolio-item__info">
+        <h3>Студия 38м²</h3>
+        <p>Иркутск • Косметика • 28 дней • 285к ₽</p>
+    </div>
+</div>
+
+    <!-- 🔥 КЕЙС 2: 2-комнатная (10 PNG) -->
+<div class="portfolio-item living" data-gallery="2">
+    <div class="portfolio-item__before" style="background-image: url('img/pf/2/1.png')"></div>
+    <div class="portfolio-item__after" style="background-image: url('img/pf/2/10.png')"></div>
+    <div class="portfolio-item__info">
+        <h3>2-комн. 65м²</h3>
+        <p>Ангарск • Капиталка • 45 дней • 680к ₽</p>
+    </div>
+</div>
+
+    <!-- 🔥 КЕЙС 3: Ванная (4 PNG) -->
+<div class="portfolio-item bathroom" data-gallery="3">
+    <div class="portfolio-item__before" style="background-image: url('img/pf/3/1.png')"></div>
+    <div class="portfolio-item__after" style="background-image: url('img/pf/3/4.png')"></div>
+    <div class="portfolio-item__info">
+        <h3>Ванная 8м²</h3>
+        <p>Иркутск • Капиталка • 14 дней • 98к ₽</p>
+    </div>
+</div>
+
+
+    <!-- 🔥 КЕЙС 4: Кухня-гостиная (7 PNG) -->
+<div class="portfolio-item kitchen living" data-gallery="4">
+    <div class="portfolio-item__before" style="background-image: url('img/pf/4/1.png')"></div>
+    <div class="portfolio-item__after" style="background-image: url('img/pf/4/7.png')"></div>
+    <div class="portfolio-item__info">
+        <h3>Кухня-гостиная</h3>
+        <p>Иркутск • Косметика • 22 дня • 320к ₽</p>
+    </div>
+</div>
+
+    <!-- 🔥 КЕЙС 5: Ипотечная Сбер (3 PNG) -->
+<div class="portfolio-item studio" data-gallery="5">
+    <div class="portfolio-item__before" style="background-image: url('img/pf/5/1.png')"></div>
+    <div class="portfolio-item__after" style="background-image: url('img/pf/5/3.png')"></div>
+    <div class="portfolio-item__info">
+        <h3>Ипотека Сбер 42м²</h3>
+        <p>Шелехов • Капиталка • 35 дней • 420к ₽</p>
+    </div>
+</div>
+
+    <!-- 🔥 КЕЙС 6: Спальня (4 PNG) -->
+<div class="portfolio-item bedroom" data-gallery="6">
+    <div class="portfolio-item__before" style="background-image: url('img/pf/6/1.png')"></div>
+    <div class="portfolio-item__after" style="background-image: url('img/pf/6/4.png')"></div>
+    <div class="portfolio-item__info">
+        <h3>Спальня 20м²</h3>
+        <p>Иркутск • Дизайнер • 18 дней • 210к ₽</p>
+    </div>
+</div>
+
+   <!-- 🔥 КЕЙС 6: Спальня (4 PNG) -->
+<div class="portfolio-item bedroom" data-gallery="6">
+    <div class="portfolio-item__before" style="background-image: url('img/pf/6/1.png')"></div>
+    <div class="portfolio-item__after" style="background-image: url('img/pf/6/4.png')"></div>
+    <div class="portfolio-item__info">
+        <h3>Спальня 20м²</h3>
+        <p>Иркутск • Дизайнер • 18 дней • 210к ₽</p>
+    </div>
+</div>
+
+    <!-- 🔥 КЕЙС 8: Под ключ премиум (6 PNG) -->
+<div class="portfolio-item kitchen" data-gallery="8">
+    <div class="portfolio-item__before" style="background-image: url('img/pf/8/1.png')"></div>
+    <div class="portfolio-item__after" style="background-image: url('img/pf/8/6.png')"></div>
+    <div class="portfolio-item__info">
+        <h3>Под ключ 48м²</h3>
+        <p>Иркутск • Полный • 35 дней • 650к ₽</p>
+    </div>
+</div>
+
+
+
+<!-- Дополнение для JS - фильтр портфолио -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Фильтр портфолио
+    const filters = document.querySelectorAll('.filter');
+    const items = document.querySelectorAll('.portfolio-item');
+
+    filters.forEach(filter => {
+        filter.addEventListener('click', () => {
+            // Активный фильтр
+            filters.forEach(f => f.classList.remove('active'));
+            filter.classList.add('active');
+
+            const filterValue = filter.getAttribute('data-filter');
+
+            items.forEach(item => {
+                if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                }
+            });
+        });
+    });
+
+    console.log('✅ Портфолио и отзывы заполнены!');
+});
+</script>
+
+        </div>
+    </section>
+
+    <!-- Stages -->
+    <section id="stages" class="stages section">
+        <div class="container">
+            <h2 class="section__title">Этапы работы</h2>
+            <div class="stages__timeline">
+                <div class="stage">
+                    <div class="stage__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-ruler"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 4h14a1 1 0 0 1 1 1v5a1 1 0 0 1 -1 1h-7a1 1 0 0 0 -1 1v7a1 1 0 0 1 -1 1h-5a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1" /><path d="M4 8l2 0" /><path d="M4 12l3 0" /><path d="M4 16l2 0" /><path d="M8 4l0 2" /><path d="M12 4l0 3" /><path d="M16 4l0 2" /></svg></div>
+                    <div class="stage__content">
+                        <h3>1. Бесплатный замер и проект</h3>
+                        <p>Выезд специалиста в день обращения</p>
+                    </div>
+                </div>
+                <div class="stage">
+                    <div class="stage__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-heart-handshake"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /><path d="M12 6l-3.293 3.293a1 1 0 0 0 0 1.414l.543 .543c.69 .69 1.81 .69 2.5 0l1 -1a3.182 3.182 0 0 1 4.5 0l2.25 2.25" /><path d="M12.5 15.5l2 2" /><path d="M15 13l2 2" /></svg></div>
+                    <div class="stage__content">
+                        <h3>2. Договор и оплата 30%</h3>
+                        <p>Фиксированная цена в договоре</p>
+                    </div>
+                </div>
+                <div class="stage">
+                    <div class="stage__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-hammer"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.414 10l-7.383 7.418a2.091 2.091 0 0 0 0 2.967a2.11 2.11 0 0 0 2.976 0l7.407 -7.385" /><path d="M18.121 15.293l2.586 -2.586a1 1 0 0 0 0 -1.414l-7.586 -7.586a1 1 0 0 0 -1.414 0l-2.586 2.586a1 1 0 0 0 0 1.414l7.586 7.586a1 1 0 0 0 1.414 0" /></svg></div>
+                    <div class="stage__content">
+                        <h3>3. Работы без пыли</h3>
+                        <p>Чистота на объекте каждый день</p>
+                    </div>
+                </div>
+                <div class="stage">
+                    <div class="stage__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg></div>
+                    <div class="stage__content">
+                        <h3>4. Контроль в WhatsApp</h3>
+                        <p>Фотоотчеты каждый этап</p>
+                    </div>
+                </div>
+                <div class="stage">
+                    <div class="stage__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-rosette-discount-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 7.2a2.2 2.2 0 0 1 2.2 -2.2h1a2.2 2.2 0 0 0 1.55 -.64l.7 -.7a2.2 2.2 0 0 1 3.12 0l.7 .7c.412 .41 .97 .64 1.55 .64h1a2.2 2.2 0 0 1 2.2 2.2v1c0 .58 .23 1.138 .64 1.55l.7 .7a2.2 2.2 0 0 1 0 3.12l-.7 .7a2.2 2.2 0 0 0 -.64 1.55v1a2.2 2.2 0 0 1 -2.2 2.2h-1a2.2 2.2 0 0 0 -1.55 .64l-.7 .7a2.2 2.2 0 0 1 -3.12 0l-.7 -.7a2.2 2.2 0 0 0 -1.55 -.64h-1a2.2 2.2 0 0 1 -2.2 -2.2v-1a2.2 2.2 0 0 0 -.64 -1.55l-.7 -.7a2.2 2.2 0 0 1 0 -3.12l.7 -.7a2.2 2.2 0 0 0 .64 -1.55v-1" /><path d="M9 12l2 2l4 -4" /></svg></div>
+                    <div class="stage__content">
+                        <h3>5. Сдача + гарантия 3 года</h3>
+                        <p>Полная сдача объекта</p>
+                    </div>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" data-progress="0"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <!-- Reviews -->
+<section class="reviews section">
+    <div class="container">
+        <h2 class="section__title">Отзывы клиентов</h2>
+        <div class="reviews__slider swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="review">
+                        <div class="review__header">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" class="review__avatar">
+                            <div>
+                                <h4>Анна К.</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>"Сделали косметический ремонт за 28 дней без переплат! Качество огонь, рекомендую!"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="review">
+                        <div class="review__header">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" class="review__avatar">
+                            <div>
+                                <h4>Михаил П.</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>"Капиталка под ключ с мебелью. Приехали в день заявки, замер бесплатный. Всё чётко!"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="review">
+                        <div class="review__header">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" class="review__avatar">
+                            <div>
+                                <h4>Елена С.</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>"Дизайнерский ремонт студии 38м². 3D проект в подарок, сделали за 35 дней. Супер!"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="review">
+                        <div class="review__header">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" class="review__avatar">
+                            <div>
+                                <h4>Дмитрий В.</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>"Ипотечная квартира под Сбер. Все акты подписали, сделали быстро и без косяков."</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="review">
+                        <div class="review__header">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" class="review__avatar">
+                            <div>
+                                <h4>Ольга М.</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>"Полный ремонт с техникой за 650к. Фотоотчеты каждый день в WhatsApp. 10/10!"</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Добавь эти кнопки навигации -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+
+    
+
+    <!-- FAQ -->
+    <section id="faq" class="faq section">
+        <div class="container">
+            <h2 class="section__title">Часто задаваемые вопросы</h2>
+            <div class="faq__list">
+                <div class="faq-item">
+                    <div class="faq-item__question js-faq-toggle">
+                        Сколько времени занимает ремонт?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-item__answer">
+                        <p>Косметический — 20-30 дней, капитальный — 45-60 дней, дизайнерский — 60-90 дней. Точные сроки по вашему объекту после замера.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-item__question js-faq-toggle">
+                        Что входит в цену "под ключ"?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-item__answer">
+                        <p>Все материалы, работа мастеров, вывоз мусора, уборка. Никаких доплат — все фиксируем в договоре.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-item__question js-faq-toggle">
+                        Можно ли посмотреть ваши объекты?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-item__answer">
+                        <p>Да, организуем просмотр завершенных объектов в Иркутске. Также покажем текущиеся работы.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-item__question js-faq-toggle">
+                        Работаете ли с ипотечными квартирами?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-item__answer">
+                        <p>Да, имеем опыт работы с Сбербанк, ВТБ, Альфа-банк. Подписываем все необходимые акты.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-item__question js-faq-toggle">
+                        Что если понадобятся изменения?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-item__answer">
+                        <p>Любые изменения согласовываем дополнительным соглашением. Цена пересчитывается по факту.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-item__question js-faq-toggle">
+                        Даете ли гарантию на работы?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-item__answer">
+                        <p>Гарантия 3 года на все работы и материалы. Бесплатный ремонт дефектов.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Contacts -->
+    <section id="contacts" class="contacts section">
+        <div class="container">
+            <h2 class="section__title">Свяжитесь с нами</h2>
+            <div class="contacts__inner">
+                <div class="contacts__info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/>
+</svg>
+</div>
+                        <div>
+                            <h4>+7 (3952) 123-456</h4>
+                            <a href="tel:+73952123456">Позвонить</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/>
+    <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/>
+</svg>
+</div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/73952123456">Написать</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M5 4h14a1 1 0 0 1 1 1v5a1 1 0 0 1 -1 1h-7a1 1 0 0 0 -1 1v7a1 1 0 0 1 -1 1h-5a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1"/>
+    <path d="M4 8l2 0"/>
+    <path d="M4 12l3 0"/>
+    <path d="M4 16l2 0"/>
+    <path d="M8 4l0 2"/>
+    <path d="M12 4l0 3"/>
+    <path d="M16 4l0 2"/>
+</svg>
+</div>
+                        <div>
+                            <h4>Бесплатный замер</h4>
+                            <p>По Иркутску в день обращения</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4l0 -8" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg> </a>
+                        <a href="#" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-vk"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 19h-4a8 8 0 0 1 -8 -8v-5h4v5a4 4 0 0 0 4 4v-9h4v4.5l.03 0a4.531 4.531 0 0 0 3.97 -4.496h4l-.342 1.711a6.858 6.858 0 0 1 -3.658 4.789a5.34 5.34 0 0 1 3.566 4.111l.434 2.389h-4a4.531 4.531 0 0 0 -3.97 -4.496v4.5l-.03 -.008" /></svg> </a>
+                        <a href="#" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-telegram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg> </a>
+                    </div>
+                </div>
+                <div class="contacts__form">
+                    <h3>Связаться в течение 5 минут</h3>
+                    <form class="quick-form">
+                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                        <textarea placeholder="Ваш вопрос или адрес для замера" rows="4"></textarea>
+                        <button type="submit" class="btn btn--primary btn--large">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Карта Иркутска -->
+            <div class="map-container" id="map">
+                <iframe 
+                    src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=104.282685%2C52.286469&mode=whatshere&whatshere%5Bpoint%5D=104.282685%2C52.286469&whatshere%5Bzoom%5D=17&z=16.51" 
+                    width="100%" 
+                    height="400" 
+                    frameborder="0">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky CTA -->
+    <div class="cta-sticky">
+       <button onclick="document.getElementById('calcModal').style.display='flex'; document.body.style.overflow='hidden'" 
+        class="btn btn--primary" type="button">
+    Рассчитать стоимость
+</button>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="logo">
+                    <svg class="logo__icon" viewBox="0 0 40 40">
+                        <path d="M20 5 L5 15 L20 25 L35 15 Z M20 15 L22 20 L20 25 L18 20 Z" fill="#D97706"/>
+                        <path d="M15 30 L25 30 L20 35 Z" fill="#065F46"/>
+                    </svg>
+                    <span class="logo__text">Sibir Key</span>
+                </div>
+                <p>© 2026 Sibir Key. Ремонт квартир под ключ в Иркутске. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+    <!-- Остальные секции в части 2 -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <!-- 🔥 ФИНАЛЬНАЯ МОДАЛКА - РАБОТАЕТ 100% -->
+<div class="modal js-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 9999; align-items: center; justify-content: center;">
+    <div class="modal__content" style="background: #FEF3C7; padding: 40px; border-radius: 20px; max-width: 500px; width: 90%; max-height: 80vh; overflow: auto;">
+        <h3 style="color: #065F46; margin-bottom: 20px;">Калькулятор стоимости</h3>
+        
+        <div style="margin-bottom: 25px;">
+            <label style="display: block; font-weight: bold; color: #065F46; margin-bottom: 10px;">Площадь, м²</label>
+            <input type="range" min="20" max="200" value="50" id="area" style="width: 100%; height: 10px;">
+            <span id="areaValue" style="font-size: 24px; color: #D97706; font-weight: bold;">50</span>
+        </div>
+        
+        <div style="margin-bottom: 30px;">
+            <label style="display: block; font-weight: bold; color: #065F46; margin-bottom: 10px;">Тип ремонта</label>
+            <select id="type" style="width: 100%; padding: 15px; border-radius: 10px; border: 2px solid #D97706;">
+                <option value="5000">Косметический (5000₽/м²)</option>
+                <option value="8000">Капитальный (8000₽/м²)</option>
+                <option value="12000">Дизайнерский (12000₽/м²)</option>
+            </select>
+        </div>
+        
+        <div id="calcPrice" style="font-size: 36px; color: #065F46; font-weight: bold; text-align: center; margin: 20px 0;">212 500</div>
+        <div style="text-align: center; color: #D97706;"></div>
+        
+        <button onclick="this.closest('.js-modal').style.display='none'; document.body.style.overflow=''" 
+                style="width: 100%; padding: 15px; background: #D97706; color: #065F46; border: none; border-radius: 10px; font-weight: bold; font-size: 16px; margin-top: 20px; cursor: pointer;">
+            Закрыть
+        </button>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // ✅ ПРЯМАЯ привязка кнопок
+    document.querySelectorAll('.js-calc-open').forEach(btn => {
+        btn.onclick = function() {
+            document.querySelector('.js-modal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        };
+    });
+    
+    // Калькулятор
+    const areaSlider = document.getElementById('area');
+    const areaValue = document.getElementById('areaValue');
+    const typeSelect = document.getElementById('type');
+    const calcPrice = document.getElementById('calcPrice');
+    
+    function updateCalc() {
+        const area = parseInt(areaSlider.value);
+        const pricePerM2 = parseInt(typeSelect.value);
+        const total = Math.round(area * pricePerM2 * 0.85);
+        
+        areaValue.textContent = area;
+        calcPrice.textContent = total.toLocaleString();
+    }
+    
+    areaSlider.oninput = updateCalc;
+    typeSelect.onchange = updateCalc;
+    updateCalc();
+});
+</script>
+<div id="calcModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); z-index: 99999; align-items: center; justify-content: center; padding: 20px;">
+    <div style="background: #ffffff; padding: 40px; border-radius: 20px; max-width: 500px; width: 100%; max-height: 90vh; overflow: auto; position: relative;">
+        <button onclick="document.getElementById('calcModal').style.display='none'; document.body.style.overflow='auto'" 
+                style="position: absolute; top: 15px; right: 15px; background: #D97706; color: white; border: none; border-radius: 50%; width: 35px; height: 35px; font-size: 18px; cursor: pointer;">×</button>
+        
+        <h3 style="color: #065F46; margin-bottom: 25px; font-size: 28px;">Калькулятор стоимости</h3>
+        
+        <div style="margin-bottom: 25px;">
+            <label style="display: block; font-weight: bold; color: #065F46; margin-bottom: 10px; font-size: 16px;">Площадь, м²</label>
+            <input type="range" min="20" max="200" value="50" id="area2" onchange="updateCalc2()" style="width: 100%; height: 8px; border-radius: 4px; background: #E5E7EB;">
+            <div id="areaValue2" style="font-size: 24px; color: #D97706; font-weight: bold; margin-top: 10px;">50</div>
+        </div>
+        
+        <div style="margin-bottom: 30px;">
+            <label style="display: block; font-weight: bold; color: #065F46; margin-bottom: 10px; font-size: 16px;">Тип ремонта</label>
+            <select id="type2" onchange="updateCalc2()" style="width: 100%; padding: 16px; border-radius: 12px; border: 2px solid #D97706; font-size: 16px; background: white;">
+                <option value="5000">Косметический (5000₽/м²)</option>
+                <option value="8000">Капитальный (8000₽/м²)</option>
+                <option value="12000">Дизайнерский (12000₽/м²)</option>
+            </select>
+        </div>
+        
+        <div id="calcPrice2" style="font-size: 40px; color: #065F46; font-weight: bold; text-align: center; margin: 25px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">212 500 ₽</div>
+        <div style="text-align: center; color: #D97706; font-size: 16px; font-weight: 600;"></div>
+    </div>
+</div>
+
+
+
+<script>
+function updateCalc2() {
+    const area = document.getElementById('area2').value;
+    const type = document.getElementById('type2').value;
+    const total = Math.round(area * type * 0.85);
+    document.getElementById('areaValue2').textContent = area;
+    document.getElementById('calcPrice2').textContent = total.toLocaleString() + ' ₽';
+}
+updateCalc2();
+</script>
+
+<script>AOS.init({ duration: 800, once: true });</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filters = document.querySelectorAll('.filter');
+    const items = document.querySelectorAll('.portfolio-item');
+
+    filters.forEach(filter => {
+        filter.addEventListener('click', () => {
+            // Активный фильтр
+            filters.forEach(f => f.classList.remove('active'));
+            filter.classList.add('active');
+
+            const filterValue = filter.getAttribute('data-filter');
+
+            items.forEach((item, index) => {
+                if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                    // ПОКАЗЫВАЕМ
+                    item.style.display = 'block';
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(30px)';
+                    
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, index * 50);
+                } else {
+                    // ПЛАВНО ПРЯЧЕМ
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(30px)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+
+    console.log('✅ БЕЗОПАСНЫЙ фильтр портфолио!');
+});
+</script>
+
+<!-- 🔥 ПОРТФОЛИО МОДАЛКА -->
+<div class="portfolio-modal" id="portfolioModal">
+    <div class="modal__overlay" onclick="closePortfolioModal()"></div>
+    <div class="portfolio-modal__content">
+        <!-- СЛАЙДЕР -->
+        <!-- 🔥 СЛАЙДЕР С СТРЕЛКАМИ - ЗАМЕНИ Весь .pm-slider -->
+<div class="pm-slider">
+    <div class="swiper-wrapper" id="pmSwiperWrapper">
+        <!-- Фото заполняются JS -->
+    </div>
+    <!-- ← ЭТИ СТРЕЛКИ НОВЫЕ! -->
+    <button class="pm-prev" onclick="prevSlide()">❮</button>
+    <button class="pm-next" onclick="nextSlide()">❯</button>
+</div>
+        
+        <!-- ИНФО справа -->
+        <div class="pm-info">
+            <h2 id="pmTitle">Загрузка...</h2>
+            <div class="pm-meta">
+                <span id="pmLocation">-</span> • 
+                <span id="pmType">-</span> • 
+                <span id="pmDays">-</span> • 
+                <span id="pmPrice">-</span>
+            </div>
+            <div class="pm-stats">
+                <div class="stat">
+                    <span>📏 Площадь:</span> 
+                    <span id="pmArea">-</span>
+                </div>
+                <div class="stat">
+                    <span>💰 Экономия:</span> 
+                    <span id="pmSavings">-</span>
+                </div>
+            </div>
+            <div class="pm-buttons">
+                <button class="btn btn--primary btn--large" onclick="openCalc()">
+                    Заказать похожий
+                </button>
+                <button class="btn btn--secondary btn--large" onclick="callNow()">
+                    Позвонить сейчас
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
